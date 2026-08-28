@@ -1,0 +1,7 @@
+[Flatpak Repo]
+Title=Nuvio Custom Repo
+Url=https://douglascdev.github.io/nuvio-flatpak-repo/repo/
+Homepage=https://github.com/douglascdev/nuvio-flatpak-repo
+Comment=An unnofficial flatpak repo for nuvio
+GPGVerify=false
+
