@@ -42,7 +42,6 @@
             VERSION=0.1.22-alpha
             wget https://github.com/NuvioMedia/NuvioDesktop/releases/download/$VERSION/Nuvio-Linux-x86_64-$VERSION.flatpak
             flatpak build-import-bundle repo Nuvio-Linux-x86_64-$VERSION.flatpak
-            flatpak build-update-repo repo
             ostree summary --repo=repo --update
           '';
           default = self.packages.${system}.import-bundle;
