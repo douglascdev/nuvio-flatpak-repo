@@ -39,7 +39,7 @@
         in
         {
           import-bundle = pkgs.writeShellScriptBin "import-bundle" ''
-            VERSION=0.1.23-alpha
+            VERSION=0.1.25-alpha
             wget https://github.com/NuvioMedia/NuvioDesktop/releases/download/$VERSION/Nuvio-Linux-x86_64-$VERSION.flatpak
             flatpak build-import-bundle repo Nuvio-Linux-x86_64-$VERSION.flatpak
             flatpak build-update-repo --generate-static-deltas --prune repo
