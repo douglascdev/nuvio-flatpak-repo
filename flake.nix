@@ -39,6 +39,8 @@
         in
         {
           import-bundle = pkgs.writeShellScriptBin "import-bundle" ''
+            # fix timestamp causing "Update is older than current version"
+            export SOURCE_DATE_EPOCH=$(date +%s)
             VERSION=0.1.38-alpha
             wget https://github.com/NuvioMedia/NuvioDesktop/releases/download/$VERSION/Nuvio-Linux-x86_64-$VERSION.flatpak
             flatpak build-import-bundle repo Nuvio-Linux-x86_64-$VERSION.flatpak
